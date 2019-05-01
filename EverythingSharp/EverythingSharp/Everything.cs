@@ -38,6 +38,7 @@ namespace EverythingSharp
         /// <param name="query">The search query.</param>
         /// <param name="sort">Sort order of the results.</param>
         /// <param name="requestFlags">The fields to return.</param>
+        /// <exception cref="EverythingException">Thrown if the search is unsuccessful.</exception>
         /// <returns>The results of the search.</returns>
         public IEnumerable<EverythingResult> Search(string query, Sort sort, RequestFlags requestFlags)
         {
