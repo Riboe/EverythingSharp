@@ -41,11 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Enums\Error.cs" />
+    <Compile Include="Enums\RequestFlags.cs" />
+    <Compile Include="Enums\Sort.cs" />
+    <Compile Include="Everything.cs" />
+    <Compile Include="EverythingBase.cs" />
+    <Compile Include="EverythingResult.cs" />
+    <Compile Include="Exceptions\EverythingException.cs" />
+    <Compile Include="Extensions\ErrorEnumExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Enums\TargetMachine.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Everything32.dll" />
+    <Content Include="Everything32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

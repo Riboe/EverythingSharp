@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EverythingSharp
+namespace EverythingSharp.Enums
 {
-    public class Class1
+    public enum TargetMachine
     {
+        X86 = 1,
+        X64 = 2,
+        Arm = 3
     }
 }
