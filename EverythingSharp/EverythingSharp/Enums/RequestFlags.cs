@@ -1,23 +1,29 @@
 ﻿
+using System;
+
 namespace EverythingSharp.Enums
 {
+    [Flags]
     public enum RequestFlags
     {
-        FileName = 1,
-        Path = 2,
-        FullPathAndFileName = 4,
-        Extension = 8,
-        Size = 16,
-        DateCreated = 32,
-        DateModified = 64,
-        DateAccessed = 128,
-        Attributes = 256,
-        FileListFileName = 512,
-        RunCount = 1024,
-        DateRun = 2048,
-        DateRecentlyChanged = 4096,
-        HighlightedFileName = 8192,
-        HighlightedPath = 16384,
-        HighlightedFullPathAndFileName = 32768,
+        [Obsolete]
+        FileName = 0x1,
+        [Obsolete]
+        Path = 0x2,
+        FullPathAndFileName = 0x4,
+        [Obsolete]
+        Extension = 0x8,
+        Size = 0x10,
+        DateCreated = 0x20,
+        DateModified = 0x40,
+        DateAccessed = 0x80,
+        Attributes = 0x100,
+        FileListFileName = 0x200,
+        RunCount = 0x400,
+        DateRun = 0x800,
+        DateRecentlyChanged = 0x1000,
+        HighlightedFileName = 0x2000,
+        HighlightedPath = 0x4000,
+        HighlightedFullPathAndFileName = 0x8000,
     }
 }

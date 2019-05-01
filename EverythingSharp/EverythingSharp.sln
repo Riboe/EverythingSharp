@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EverythingSharp", "EverythingSharp\EverythingSharp.csproj", "{6055B099-55E3-47DE-A4FC-932874E1D367}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EverythingSharp.Tester", "EverythingSharp.Tester\EverythingSharp.Tester.csproj", "{7EBCE2ED-A9DA-4E01-976E-46FF5CA2443F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6055B099-55E3-47DE-A4FC-932874E1D367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6055B099-55E3-47DE-A4FC-932874E1D367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6055B099-55E3-47DE-A4FC-932874E1D367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EBCE2ED-A9DA-4E01-976E-46FF5CA2443F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EBCE2ED-A9DA-4E01-976E-46FF5CA2443F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EBCE2ED-A9DA-4E01-976E-46FF5CA2443F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EBCE2ED-A9DA-4E01-976E-46FF5CA2443F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
