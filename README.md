@@ -18,10 +18,11 @@ using(var everything = new Everything())
 }
 ```
 
-To control sorting or request additional fields:
+To control maximum number of results, sorting, and request additional fields:
 ```C#
 var query = "Chrome";
-var sorting = Sort.SizeAscending;
+var maxResults = 10 
+var sorting = Sort.SizeDescending;
 var fields = RequestFlags.FullPathAndFileName | RequestFlags.Size;
-var results = everything.Search(query, sorting, fields);
+var results = everything.Search(query, maxResults, sorting, fields);
 ```
