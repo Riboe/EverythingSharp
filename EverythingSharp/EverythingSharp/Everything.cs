@@ -20,13 +20,15 @@ namespace EverythingSharp
         /// <param name="requestFlags">The fields to return.</param>
         /// <exception cref="EverythingException">Thrown if the search is unsuccessful.</exception>
         /// <returns>The results of the search.</returns>
-        public IEnumerable<EverythingResult> Search(string query, int maxResults = -1, Sort sort = Sort.NameAscending, RequestFlags requestFlags = RequestFlags.FullPathAndFileName)
+        public IEnumerable<EverythingResult> Search(string query, int maxResults = -1, int offset = -1, Sort sort = Sort.NameAscending, RequestFlags requestFlags = RequestFlags.FullPathAndFileName)
         {
             Everything_SetSearch(query);
             Everything_SetSort((uint) sort);
             Everything_SetRequestFlags((uint) requestFlags);
             if(maxResults > -1)
                 Everything_SetMax((uint) maxResults);
+            if(offset > -1)
+                Everything_SetOffset((uint) offset);
 
             bool success = Everything_Query(true);
             if (!success)
