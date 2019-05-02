@@ -12,27 +12,6 @@ namespace EverythingSharp
     public class Everything : EverythingBase, IDisposable
     {
         /// <summary>
-        /// Performs a search for the specified query.
-        /// </summary>
-        /// <param name="query">The search query.</param>
-        /// <returns>The results of the search.</returns>
-        public IEnumerable<EverythingResult> Search(string query)
-        {
-            return Search(query, Sort.NameAscending);
-        }
-
-        /// <summary>
-        /// Performs a search for the specified query and sorts the results.
-        /// </summary>
-        /// <param name="query">The search query.</param>
-        /// <param name="sort">Sort order of the results.</param>
-        /// <returns>The results of the search.</returns>
-        public IEnumerable<EverythingResult> Search(string query, Sort sort)
-        {
-            return Search(query, Sort.NameAscending, RequestFlags.FullPathAndFileName);
-        }
-
-        /// <summary>
         /// Performs a search for the specified query and sorts the results.
         /// </summary>
         /// <param name="query">The search query.</param>
@@ -40,7 +19,7 @@ namespace EverythingSharp
         /// <param name="requestFlags">The fields to return.</param>
         /// <exception cref="EverythingException">Thrown if the search is unsuccessful.</exception>
         /// <returns>The results of the search.</returns>
-        public IEnumerable<EverythingResult> Search(string query, Sort sort, RequestFlags requestFlags)
+        public IEnumerable<EverythingResult> Search(string query, Sort sort = Sort.NameAscending, RequestFlags requestFlags = RequestFlags.FullPathAndFileName)
         {
             Everything_SetSearch(query);
             Everything_SetSort((uint) sort);
@@ -66,6 +45,8 @@ namespace EverythingSharp
                 Everything_GetResultDateCreated(index, out long dateCreated);
                 Everything_GetResultDateAccessed(index, out long dateAccessed);
                 Everything_GetResultDateModified(index, out long dateModified);
+                Everything_GetResultDateRecentlyChanged(index, out long dateRecentlyChanged);
+                Everything_GetResultDateRun(index, out long dateRun);
 
                 yield return new EverythingResult
                 {
@@ -74,6 +55,10 @@ namespace EverythingSharp
                     DateCreated = dateCreated > 0 ? DateTime.FromFileTime(dateCreated) : (DateTime?) null, 
                     DateAccessed = dateAccessed > 0 ? DateTime.FromFileTime(dateAccessed) : (DateTime?) null,
                     DateModified = dateModified > 0 ? DateTime.FromFileTime(dateModified) : (DateTime?) null,
+                    DateRecentlyChanged = dateRecentlyChanged > 0 ? DateTime.FromFileTime(dateRecentlyChanged) : (DateTime?) null,
+                    DateRun = dateRun > 0 ? DateTime.FromFileTime(dateRun) : (DateTime?) null,
+                    RunCount = Everything_GetResultRunCount(index),
+                    Attributes = Everything_GetResultAttributes(index)
                 };
             }
         }

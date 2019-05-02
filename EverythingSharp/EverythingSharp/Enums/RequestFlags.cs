@@ -18,12 +18,16 @@ namespace EverythingSharp.Enums
         DateModified = 0x40,
         DateAccessed = 0x80,
         Attributes = 0x100,
+        [Obsolete]
         FileListFileName = 0x200,
         RunCount = 0x400,
         DateRun = 0x800,
         DateRecentlyChanged = 0x1000,
+        [Obsolete]
         HighlightedFileName = 0x2000,
+        [Obsolete]
         HighlightedPath = 0x4000,
+        [Obsolete]
         HighlightedFullPathAndFileName = 0x8000,
     }
 }
