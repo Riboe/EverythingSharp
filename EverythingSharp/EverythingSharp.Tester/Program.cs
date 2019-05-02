@@ -13,7 +13,7 @@ namespace EverythingSharp.Tester
         {
             using (Everything everything = new Everything())
             {
-                IEnumerable<EverythingResult> results = everything.Search("League of Legends", Sort.NameAscending, RequestFlags.Size | RequestFlags.FullPathAndFileName | RequestFlags.DateAccessed |
+                IEnumerable<EverythingResult> results = everything.Search("League of Legends", 10, Sort.RunCountDescending, RequestFlags.Size | RequestFlags.FullPathAndFileName | RequestFlags.DateAccessed |
                                                                                                                    RequestFlags.DateCreated | RequestFlags.DateModified | RequestFlags.RunCount |
                                                                                                                    RequestFlags.DateRecentlyChanged | RequestFlags.DateRun | RequestFlags.Attributes);
 

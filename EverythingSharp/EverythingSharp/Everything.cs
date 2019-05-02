@@ -15,15 +15,18 @@ namespace EverythingSharp
         /// Performs a search for the specified query and sorts the results.
         /// </summary>
         /// <param name="query">The search query.</param>
+        /// <param name="maxResults">The maximum number of results to return. If less that 0, all results are returned.</param>
         /// <param name="sort">Sort order of the results.</param>
         /// <param name="requestFlags">The fields to return.</param>
         /// <exception cref="EverythingException">Thrown if the search is unsuccessful.</exception>
         /// <returns>The results of the search.</returns>
-        public IEnumerable<EverythingResult> Search(string query, Sort sort = Sort.NameAscending, RequestFlags requestFlags = RequestFlags.FullPathAndFileName)
+        public IEnumerable<EverythingResult> Search(string query, int maxResults = -1, Sort sort = Sort.NameAscending, RequestFlags requestFlags = RequestFlags.FullPathAndFileName)
         {
             Everything_SetSearch(query);
             Everything_SetSort((uint) sort);
             Everything_SetRequestFlags((uint) requestFlags);
+            if(maxResults > -1)
+                Everything_SetMax((uint) maxResults);
 
             bool success = Everything_Query(true);
             if (!success)
