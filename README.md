@@ -1,4 +1,6 @@
 # EverythingSharp
-A simple C# wrapper around the Everything SDK from Voidtools.
+A simple C# wrapper around the [Everything SDK](https://www.voidtools.com/support/everything/sdk/) from Voidtools.
 
-Requires Everything to be installed to work.
+
+## Requirements
+Everything must be installed an running.
