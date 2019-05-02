@@ -11,10 +11,10 @@ using(var everything = new Everything())
     var query = "Chrome";
     var results = everything.Search(query);
   
-  foreach (EverythingResult result in results)
-  {
-      Console.WriteLine(result.FullPath);
-  }
+    foreach (EverythingResult result in results)
+    {
+        Console.WriteLine(result.FullPath);
+    }
 }
 ```
 
