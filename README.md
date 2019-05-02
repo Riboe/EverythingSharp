@@ -13,7 +13,7 @@ using(var everything = new Everything())
   
   foreach (EverythingResult result in results)
   {
-      Console.WriteLine(result.FullPath);
+    Console.WriteLine(result.FullPath);
   }
 }
 ```
