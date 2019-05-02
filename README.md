@@ -21,7 +21,7 @@ using(var everything = new Everything())
 To control maximum number of results, sorting, and request additional fields:
 ```C#
 var query = "Chrome";
-var maxResults = 10 
+var maxResults = 10;
 var sorting = Sort.SizeDescending;
 var fields = RequestFlags.FullPathAndFileName | RequestFlags.Size;
 var results = everything.Search(query, maxResults, sorting, fields);
