@@ -41,16 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\EntryType.cs" />
     <Compile Include="Enums\Error.cs" />
+    <Compile Include="Enums\FileInfoType.cs" />
     <Compile Include="Enums\RequestFlags.cs" />
     <Compile Include="Enums\Sort.cs" />
     <Compile Include="Everything.cs" />
     <Compile Include="EverythingBase.cs" />
     <Compile Include="EverythingResult.cs" />
+    <Compile Include="Fluent\EverythingEntry.cs" />
+    <Compile Include="Fluent\EverythingSearcher.cs" />
+    <Compile Include="Fluent\EverythingSearchOptions.cs" />
     <Compile Include="Exceptions\EverythingException.cs" />
     <Compile Include="Extensions\ErrorEnumExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Enums\TargetMachine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Everything32.dll">

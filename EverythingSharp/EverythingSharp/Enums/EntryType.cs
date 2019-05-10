@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace EverythingSharp.Enums
 {
-    public enum TargetMachine
+    public enum EntryType
     {
-        X86 = 1,
-        X64 = 2,
-        Arm = 3
+        File,
+        Folder,
+        Volume
     }
 }
