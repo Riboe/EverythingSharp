@@ -83,6 +83,15 @@ namespace EverythingSharp.Fluent
         }
 
         /// <summary>
+        /// Increments the run count for the specified path and returns the new run count.
+        /// </summary>
+        /// <returns>The new run count.</returns>
+        public uint IncrementRunCount(string path)
+        {
+            return Everything_IncRunCountFromFileName(path);
+        }
+
+        /// <summary>
         /// Gets the run count for the given path.
         /// </summary>
         public uint GetRunCountForFile(string path)
