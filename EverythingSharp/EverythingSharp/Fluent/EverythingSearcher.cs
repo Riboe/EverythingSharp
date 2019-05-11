@@ -82,6 +82,14 @@ namespace EverythingSharp.Fluent
             return Everything_IncRunCountFromFileName(result.FullPath);
         }
 
+        /// <summary>
+        /// Gets the run count for the given path.
+        /// </summary>
+        public uint GetRunCountForFile(string path)
+        {
+            return Everything_GetRunCountFromFileName(path);
+        }
+
         public void Dispose()
         {
             Everything_CleanUp();
